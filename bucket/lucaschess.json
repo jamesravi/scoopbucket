@@ -1,0 +1,28 @@
+{
+    "version": "R2.15c",
+	"description": "Chess program to train, play and compete, open source, developed with Python.",
+	"homepage": "https://lucaschess.pythonanywhere.com/",
+	"license": "GPL-3.0-or-later",
+	"extract_dir": "LucasChessR",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/lukasmonk/lucaschessR2/releases/download/R2.15c/LucasChessR02_15c.exe"
+        }
+    },
+	"shortcuts": [
+		[
+			"bin\\LucasR.exe",
+			"Lucas Chess"
+		]
+	],
+    "checkver": {
+        "github": "https://github.com/lukasmonk/lucaschessR2"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/lukasmonk/lucaschessR2/releases/download/$version/LucasChessR0$version.exe"
+            }
+        }
+    }
+}
