@@ -16,6 +16,9 @@
         "Move-Item -Path \"$dir\\LucasChessR\\*\" -Destination \"$dir\" -Force",
         "Remove-Item -LiteralPath \"$dir\\LucasChessR\" -Force -Recurse"
     ],
+    "persist": [
+        "UserData"
+    ],
     "shortcuts": [
         [
             "bin\\LucasR.exe",
