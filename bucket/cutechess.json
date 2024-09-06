@@ -1,6 +1,32 @@
 {
-    "version": "1.0",
-    "url": "https://github.com/lukesampson/cowsay-psh/archive/master.zip",
-    "extract_dir": "cowsay-psh-master",
-    "bin": "cowsay.ps1"
+    "version": "1.3.1",
+    "description": "A graphical user interface, command-line interface and a library for playing chess.",
+    "homepage": "https://cutechess.com/",
+    "license": "GPL-3.0-or-later",
+    "shortcuts": [
+        [
+            "cutechess.exe",
+            "CuteChess"
+        ]
+    ],
+    "bin": [
+        "cutechess-cli.exe"
+    ],
+	"architecture": {
+        "64bit": {
+			"checkver": {
+				"github": "https://github.com/cutechess/cutechess",
+				"regex": "(.+)win64.zip"
+			},
+			"extract_dir": "cutechess-<version>-win64"
+		},
+        "32bit": {
+			"checkver": {
+				"github": "https://github.com/cutechess/cutechess",
+				"regex": "(.+)win32.zip"
+			},
+			"extract_dir": "cutechess-<version>-win32"
+		}
+	}
+
 }
