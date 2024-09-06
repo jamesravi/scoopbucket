@@ -1,0 +1,20 @@
+{
+    "version": "0.24",
+    "description": "Open source homebrew SDK for the PS1",
+    "homepage": "https://github.com/Lameguy64/PSn00bSDK",
+    "license": "MPL-2.0,GPL-2.0+,GPL-3.0-with-GCC-exception,Zlib,MIT-0,BSD-3-Clause",
+    "depends": "cmake",
+    "url": "https://github.com/Lameguy64/PSn00bSDK/releases/download/v0.24/PSn00bSDK-0.24-win32.zip",
+    "hash": "13a355afa89ecb2505882388841c42d9d231d40bbbe9ae22eb5e16abe19b2ea7",
+    "extract_dir": "PSn00bSDK-0.24-win32",
+    "bin": [
+        "bin\\mipsel-none-elf-gcc.exe",
+        "bin\\elf2x.exe",
+        "bin\\mkpsxiso.exe"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/Lameguy64/PSn00bSDK/releases/download/v$version/PSn00bSDK-$version-win32.zip",
+        "extract_dir": "PSn00bSDK-$version-win32"
+    }
+}
