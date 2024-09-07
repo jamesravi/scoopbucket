@@ -7,11 +7,10 @@
     "url": "https://github.com/Lameguy64/PSn00bSDK/releases/download/v0.24/PSn00bSDK-0.24-win32.zip",
     "hash": "13a355afa89ecb2505882388841c42d9d231d40bbbe9ae22eb5e16abe19b2ea7",
     "extract_dir": "PSn00bSDK-0.24-win32",
-    "bin": [
-        "bin\\mipsel-none-elf-gcc.exe",
-        "bin\\elf2x.exe",
-        "bin\\mkpsxiso.exe"
-    ],
+    "env_add_path": "bin",
+    "env_set": {
+        "PSN00BSDK_LIBS": "$dir\\lib\\libpsn00b"
+    },
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/Lameguy64/PSn00bSDK/releases/download/v$version/PSn00bSDK-$version-win32.zip",
