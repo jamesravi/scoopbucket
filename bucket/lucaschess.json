@@ -1,12 +1,12 @@
 {
-    "version": "2.15c",
+    "version": "2.21-FP14",
     "description": "Chess program to train, play and compete, open source, developed with Python.",
     "homepage": "https://lucaschess.pythonanywhere.com/",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/lukasmonk/lucaschessR2/releases/download/R2.15c/LucasChessR02_15c.exe",
-            "hash": "43bfd863d7e31908ecea62bc9c780f088e8002d74375958a5a80b38f39a7e350",
+            "url": "https://github.com/lukasmonk/lucaschessR2/releases/download/R2.21-FP14/LucasChessR02_21-FP14.exe",
+            "hash": "fcfb90795779903f98c0533590fd4a7022088793681920beb62e00e4549f0ef0",
             "extract_dir": "LucasChessR"
         }
     },
@@ -16,9 +16,7 @@
         "Move-Item -Path \"$dir\\LucasChessR\\*\" -Destination \"$dir\" -Force",
         "Remove-Item -LiteralPath \"$dir\\LucasChessR\" -Force -Recurse"
     ],
-    "persist": [
-        "UserData"
-    ],
+    "persist": "UserData",
     "shortcuts": [
         [
             "bin\\LucasR.exe",
@@ -27,13 +25,13 @@
     ],
     "checkver": {
         "github": "https://github.com/lukasmonk/lucaschessR2",
-        "regex": "R([\\d.]+[a-z]?)",
-        "replace": "${1}"
+        "regex": "R([\\d]+)\\.([^ ]+)",
+        "replace": "${1}.${2}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/lukasmonk/lucaschessR2/releases/download/$version/LucasChessR0$underscoreVersion.exe",
+                "url": "https://github.com/lukasmonk/lucaschessR2/releases/download/R$version/LucasChessR0$majorVersion_$minorVersion$matchTail.exe",
                 "extract_dir": "LucasChessR"
             }
         }
